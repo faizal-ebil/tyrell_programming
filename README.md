@@ -1,6 +1,11 @@
 # tyrell_programming
 a. Programming Test
 
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
+- [ ] 
 - [x] 7a. https://github.com/faizal-ebil/tyrell_programming
 - [x] 7bi. Code and Plugin: PHP8, JavaScript, CSS, HTML, Bootstrap 5, Fontawesome
 - [x] 7c. Inside the code
