@@ -6,6 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!is_numeric($number_people) || $number_people < 1) {
         $result = 'Input value does not exist or value is invalid';
     } else {
+
+      try {
         // Cards setup
         $suits = ['S', 'H', 'D', 'C'];
         $ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
@@ -33,6 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         foreach ($distribution as $person => $cards) {
             $result .= "<p><strong>$person :</strong> " . implode(', ', $cards) . "</p>";
         }
+      } catch (Exception $e) {
+          error_log('Error: ' . $e->getMessage());
+          $result = 'Irregularity occurred';
+      }
     }
 }
 ?>
